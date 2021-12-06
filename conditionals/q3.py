@@ -10,18 +10,24 @@ Examples
     >>> isScalene(2, 2, 3)
     False
 """
-def isScalene(x, y, z): 
-	f=[x,y,z]
-	for i in f:
-		if i <= 0 :
-			return False
-	s1 = set(f)
-	b = False
-	if len(s1)<3:
-		b= False
-	else:
-		b = True
-	return b
 
-print(isScalene(2,1,5))
-print(isScalene(4,2,2))
+
+def isScalene(x, y, z):
+    f = [x, y, z]
+    for i in f:
+        if i <= 0:
+            return False
+    s1 = set(f)
+    b = False
+    if len(s1) < 3:
+        b = False
+    else:
+        b = True
+    return b
+
+
+if __name__ == "__main__":
+    print(isScalene(2, 1, 5))
+    print(isScalene(4, 2, 2))
+
+__name__ = "__main__"

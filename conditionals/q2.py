@@ -14,19 +14,26 @@ Examples
     >>> isIsosceles(0, 0, 2)
     False
 """
-def isIsosceles(x, y, z): 
-	""" returns of the triangle is Isosceles or not """
-	
-	l =[x ,y, z]
-	for i in l:
-		if i <= 0:
-			return False
-	b = False
-	if x==y or y==z or x==z:
-		b = True
-	else:
-		b =False
-	return b
-	
-print(isIsosceles(2,3,10))
-print(isIsosceles(2,1,4))
+
+
+def isIsosceles(x, y, z):
+    """ returns of the triangle is Isosceles or not """
+    l = [x, y, z]
+    for i in l:
+        if i <= 0:
+            return False
+    b = False
+    if x == y or y == z or x == z:
+        b = True
+    else:
+        b = False
+    return b
+
+
+def main():
+    print(isIsosceles(2, 3, 10))
+    print(isIsosceles(2, 1, 4))
+
+
+if __name__ == "__main__":
+    main()

@@ -24,35 +24,28 @@ Examples
    'Your BMI is 16.0 (Risk of nutritional deficiency diseases).'
 """
 
+
 def HealthScreen(weight, height):
-	""" Prints the Risk acco. to BMI """
-	BMI = float(weight)/float( height*height )
-	m = ""
-	
-	if BMI >= 27.5:
-		m = "High Risk"
-	elif 23<=BMI<=27.4:
-		m = "Moderate Risk"
-	elif 18.5<BMI<=22.9:
-		m = "Low Risk"
-	else :
-		m = "Risk of nutritional deficiency diseases"
-	return  'Your BMI is {} ({}).'.format(round(BMI,1) , m)
+    """ Prints the Risk acco. to BMI """
+    BMI = float(weight)/float(height*height)
+    m = ""
+
+    if BMI >= 27.5:
+        m = "High Risk"
+    elif 23 <= BMI <= 27.4:
+        m = "Moderate Risk"
+    elif 18.5 < BMI <= 22.9:
+        m = "Low Risk"
+    else:
+        m = "Risk of nutritional deficiency diseases"
+    return 'Your BMI is {} ({}).'.format(round(BMI, 1), m)
 
 
-print(HealthScreen(85, 1.75))
-print(HealthScreen(60, 1.63))
-print(HealthScreen(40, 1.58))
+def main():
+    print(HealthScreen(85, 1.75))
+    print(HealthScreen(60, 1.63))
+    print(HealthScreen(40, 1.58))
 
 
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    main()

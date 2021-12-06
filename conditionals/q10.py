@@ -9,22 +9,30 @@ Examples
     >>> LeapYear(2010)
     False
 """
-def LeapYear(yr): 
-	""" Return True or False if yr is Lear or not """
-	b=True 
-	if yr %4 == 0 :
-		if yr%100 == 0 :
-			if yr %400 == 0 :
-				b= True 
-			else :
-				b= False 
-		else :
-			b= True 
-	else :
-		b = False 
-	
-	return b
 
 
-print( LeapYear(2010))
-print(LeapYear(2012))
+def LeapYear(yr):
+    """ Return True or False if yr is Lear or not """
+    b = True
+    if yr % 4 == 0:
+        if yr % 100 == 0:
+            if yr % 400 == 0:
+                b = True
+            else:
+                b = False
+        else:
+            b = True
+    else:
+        b = False
+
+    return b
+
+
+def main():
+    """ Works as a main function"""
+    print(LeapYear(2010))
+    print(LeapYear(2012))
+
+
+if __name__ == "__main__":
+    main()

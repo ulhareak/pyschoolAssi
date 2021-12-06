@@ -14,22 +14,29 @@ Examples
    False
    
 """
-# Hint: Step through the range between (2, number-1), 
+# Hint: Step through the range between (2, number-1),
 # and determine if the number is divisible using the modulus operator.
 
-def isPrime(x):
-	""" Returns True or False if the number is Prime or Not """
-	#x = 4
-	b = True
-	if x< 2 :
-		b= False 
-	else : 
-		for i in range(2, int(x/2)+1):
-			if x%i==0:
-				b = False
-				break
-	return b 
 
-print(isPrime(97))
-print(isPrime(1))
-print(isPrime(-2))
+def isPrime(x):
+    """ Returns True or False if the number is Prime or Not """
+    #x = 4
+    b = True
+    if x < 2:
+        b = False
+    else:
+        for i in range(2, int(x/2)+1):
+            if x % i == 0:
+                b = False
+                break
+    return b
+
+
+def main():
+    print(isPrime(97))
+    print(isPrime(1))
+    print(isPrime(-2))
+
+
+if __name__ == "__main__":
+    main()

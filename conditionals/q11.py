@@ -20,34 +20,36 @@ Examples
     Score: 4 
     >>>
 """
-def pairwiseScore(seqA, seqB): 
-	"""" returns Priewise comp. of DNA seq. """
-	score = 0 
-	f = False
-	s=""  
-	
-	for i in range (len(seqA)):
-		if seqA[i]==seqB[i] :
-			s+="|"
-			if f == True :
-				score +=3
-				continue
-			score +=1
-			f = True
-		else :
-			s+=" "
-			f = False 
-			score -=1
-	
-	return "{}\n{}\n{}\nScore: {}".format(seqA ,s,seqB,score)	
-
-print(pairwiseScore("GATAAATCTGGTCT", "CATTCATCATGCAA"))
-print(pairwiseScore("ATTCGT", "ATCTAT"))
 
 
+def pairwiseScore(seqA, seqB):
+    """" returns Priewise comp. of DNA seq. """
+    score = 0
+    f = False
+    s = ""
+
+    for i in range(len(seqA)):
+        if seqA[i] == seqB[i]:
+            s += "|"
+            if f == True:
+                score += 3
+                continue
+            score += 1
+            f = True
+        else:
+            s += " "
+            f = False
+            score -= 1
+
+    return "{}\n{}\n{}\nScore: {}".format(seqA, s, seqB, score)
 
 
+def main():
+	"""Works as a main function of a program"""
+    print(pairwiseScore("GATAAATCTGGTCT", "CATTCATCATGCAA"))
+    print(pairwiseScore("ATTCGT", "ATCTAT"))
+    print("added new line ")
 
 
-
-
+if __name__ + + "__main__":
+    main()
